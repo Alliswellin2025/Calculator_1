@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #b431e8;
+    background: radial-gradient(circle, rgba(180, 49, 232, 0.86) 0%, rgba(147, 46, 242, 0.86) 65%, rgba(45, 90, 237, 0.95) 100%);
+    margin: 2px;
+}
+
+.calculator {
+    background: #573BF5;
+    background: linear-gradient(0deg, rgba(87, 59, 245, 1) 0%, rgba(230, 80, 250, 1) 50%, rgba(87, 59, 245, 1) 100%);
+    border:3px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 12px 15px 5px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 450px;
+}
+
+#display {
+    width: calc(100% - 0px);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: right;
+    border: 2px solid #d3d1d1;
+    background-color: #444;
+    color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #787777;
+}
+
+button:active {
+    background-color: #fdd2d2;
+}
+
+.buttons button:nth-child(1), /* C */
+.buttons button:nth-child(2)   /* DEL */ 
+        {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.buttons button:nth-child(3), /* / */
+.buttons button:nth-child(4), /* * */
+.buttons button:nth-child(8), /* - */
+.buttons button:nth-child(12),/* + */
+.buttons button:nth-child(16)  /* = */
+        {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+.buttons button:nth-child(16) { /* = */
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.buttons button:last-child { /* . */
+    grid-column: span 2;
+}
